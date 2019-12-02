@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Dec 01, 2019 at 07:15 PM
+-- Generation Time: Dec 02, 2019 at 05:33 PM
 -- Server version: 5.7.26
 -- PHP Version: 7.3.8
 
@@ -30,15 +30,15 @@ CREATE TABLE `tbl_data` (
   `ID` int(11) NOT NULL,
   `Program` varchar(50) NOT NULL,
   `Requirements` varchar(20) NOT NULL,
-  `Graduation Rates` varchar(10) NOT NULL,
-  `Employment Rates` varchar(10) NOT NULL
+  `GraduationRates` varchar(10) NOT NULL,
+  `EmploymentRates` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tbl_data`
 --
 
-INSERT INTO `tbl_data` (`ID`, `Program`, `Requirements`, `Graduation Rates`, `Employment Rates`) VALUES
+INSERT INTO `tbl_data` (`ID`, `Program`, `Requirements`, `GraduationRates`, `EmploymentRates`) VALUES
 (1, 'Management and Organizational Studies', 'Low - Mid 80s', '85.6%', '87.2%'),
 (2, 'Arts, Soc Sci, Kinesiology, FIMS', 'Low - Mid 80s', '83.4%', '87.9%'),
 (3, 'Engineering', 'High 80s', '82.9%', '82.5%'),

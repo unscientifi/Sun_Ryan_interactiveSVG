@@ -1,3 +1,2 @@
-This is a project about route and sql
+This is an interactive poster about Western University's admission requirements and graduation rates
 
-Three of my favourite things are shown on the site

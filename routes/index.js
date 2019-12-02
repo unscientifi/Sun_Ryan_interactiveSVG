@@ -4,45 +4,41 @@ const router = express.Router();
 const sql = require('../utils/sql');
 
 router.get('/', (req, res) => {
-    // should really get the user data here and then fetch it thru, but let's try this asynchronously
+   
     console.log('at the main route');
 
-    let query = "SELECT Image, ID, Name, Price, Weight FROM tbl_things";
+    let query = `SELECT ID FROM tbl_data`;
 
     sql.query(query, (err, result) => {
         if (err) { throw err; console.log(err); }
 
-        console.log(result); // should see objects wrapped in an array
-
-        // render the home view with dynamic data
+        console.log(result); 
          res.render('home', { thing: result });
-
-         // , { data: result }
     })
 })
 
-router.get('/users/:id', (req, res) => {
+router.get('/svgdata/:target', (req, res) => {
     console.log('hit a dynamic route!');
     console.log(req.params.id);
 
-    let query = `SELECT * FROM tbl_things WHERE ID ="${req.params.id}"`;
+    let query = `SELECT * FROM tbl_data WHERE ID ="${req.params.target}"`;
 // dynamic selection based on the id
     sql.query(query, (err, result) => {
-        if (err) { throw err; console.log(err); }
+        if (err) console.log(err);
+        console.log(result); 
+        res.json(result[0]);
+    
         
-        console.log(result); //should see objects in array
-        
-        
-        //which isn't anything we can work with
-        result[0].Weight = result[0].Weight.split(",").map(function(item) {
-            item = item.trim(); // remove the extra spaces from each word
+       
+        // result[0].Program = result[0].Program.split(",").map(function(item) {
+        //     item = item.trim(); 
 
-            return item;
-        })
+        //     return item;
+        // })
 
         // console.log('after split: ', result[0]);
 
-        res.json(result); // sends the DB query back to the broswer
+        // res.json(result); 
     })
 })
 

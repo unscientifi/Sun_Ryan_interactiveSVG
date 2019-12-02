@@ -3,7 +3,7 @@ const config = {
     port: 8889, // 8889 for mac
     uname: "root",
     pword: "root", // leave blank for windows
-    database: "favourite"
+    database: "interactive"
 }
 
 module.exports = config;

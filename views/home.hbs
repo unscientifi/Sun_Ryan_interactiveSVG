@@ -1,52 +1,48 @@
 
 <section id="section1" class="panel1">
-    <h1 class="user-panel-heading">
-        Do you enjoy technology?
-    </h1>
+   
 
+    <div class="label_wrapper">
+        <h1 class="hidden">Direct Program Information</h1>
+       
+            <object data="images/directChart.svg" type="image/svg+xml" class="svg-graphic" id="chart">
+            </object>
+          </div>
+ 
+    
+    <div class="name_wrapper">
+
+    <span class="see-more" data-target="1"> 1</span>
+    <span class="see-more" data-target="2"> 2</span>
+    <span class="see-more" data-target="3"> 3</span>
+    <span class="see-more" data-target="4"> 4</span>
+    <span class="see-more" data-target="5"> 5</span>
+    <span class="see-more" data-target="6"> 6</span>
     
 
-    <h3>Click on a Button below to see more information.</h3>
+    <article class="popover">
+        <h2 class="programs"></h2>
+        <h3 class="requirement"></h3>
+            <h3 class="grads"></h3>
+            <h3 class="employ"></h3>
+    </article>
+    </div>
+
 
     <div class="things-panel">
-        
+       
 
         {{#each thing}}
         <div class="user-panel">
-            <img class="u-avatar" src="images/{{ Image }}" alt="avatar">
-
-            <a class="u-link" href="{{ ID }}">
-                 More Info
-            </a>
-
-            <h1>{{ Name }}</h1>
-            <h3 class="u-price">{{ Price }}</h3>
+             
+            <h2>{{ Program }}</h2>
+            <h3>{{ Requirements }}</h3>
+            <h3>{{ GraduationRates }}</h3>
+            <h3>{{ EmploymentRates }}</h3>
         </div>
         {{/each}}
 
-
     </div>
     </div>
 
-    <section id="section2" class="panel2">
-    <div class="bio-info">
-        <h1 class="p-name">DJI Company Info</h1>
-        <p>
-        DJI Sciences and Technologies Ltd. (Chinese: 大疆创新科技有限公司),is a Chinese technology company headquartered in Shenzhen, Guangdong with factories throughout the world, and is a world-leading manufacturer of commercial unmanned aerial vehicles (commonly known as "drones") for aerial photography and videography. It also designs and manufactures camera gimbals, action cameras, camera stabilizers, flight platforms and propulsion systems and flight control systems.
-    </p>
-    </div>
-
-</section>
-
-    <!-- this will be filled in on the client side when we render our AJAX data -->
-    <section class="lightbox">
-        <span class="close">x</span>
-        <div class="sidebar">
-            <img src="" alt="larger bio image">
-        </div>
-
-        <div class="lb-content">
-            
-        </div>
-    </section>
 </section>

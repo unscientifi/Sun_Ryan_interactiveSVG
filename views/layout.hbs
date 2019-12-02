@@ -10,13 +10,18 @@
     <!-- link to reset -->
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.ico">
     <link rel="stylesheet" href="css/main.css">
-    <title>Favourite Things</title>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <title>Interactive Poster</title>
 </head>
 
 <body>
     
     <header>
-        <h1>Favourite Things</h1>
+        <img src="images/logo.png" id="logo">
+        <h1>Western University</h1>
     </header>
 
 
@@ -32,22 +37,22 @@
 
     <script type="module" src="js/main.js"></script>
     <script>
-        var name = "1";
+        var id = "1";
 
-        console.log('name in main file: ' + name);
+        console.log('name in main file: ' + id);
     </script>
 
     <!-- templates -> these don't get rendered immediately -->
     <template id="user-template">
         <!-- you can put all kinds of markup here - semantic tagging, etc -->
-        <div class="user-panel">
+        {{!-- <div class="user-panel">
             <div class="user-panel-header">
                 <img class="u-avatar"></img>
                 <h1 class="u-name"></h1>
             </div>
 
             <button class="user-button">More Details</button>
-        </div>
+        </div> --}}
     </template>
     <!-- end templates-->
 </body>
